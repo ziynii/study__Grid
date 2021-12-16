@@ -1,15 +1,30 @@
-.wrapper {
+.grid {
   display: grid;
-  grid-template-columns: 250px 250px 250px;
-	grid-template-rows: 100px 50px 300px;
-	gap: 10px;
+  grid-template-columns: repeat(4, 200px);
+  grid-template-rows: 100px repeat(2,200px) 100px;
+  grid-template-areas:
+    'header header header header'
+    'content content content nav'
+    'content content content nav'
+    'footer footer footer footer';
 }
 
-.box {
-  background: cornflowerblue;
-  color: white;
-  font-size: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.header {
+  background-color: #f7d794;
+  grid-area: header;
+}
+
+.content {
+  background-color: #f8a5c2;
+  grid-area: content;
+}
+
+.nav {
+  background-color: #63cdda;
+  grid-area: nav;
+}
+
+.footer {
+  background-color: #ea8685;
+  grid-area: footer;
 }
