@@ -2,31 +2,26 @@
   display: grid;
   grid-template-columns: repeat(4, 200px);
   grid-template-rows: repeat(4, 200px);
-	gap: 10px;
+  gap: 10px;
 }
 
 .header {
   background-color: #f7d794;
-	grid-column-start: 1;
-	grid-column-end: 5;
+  grid-column: span 4;
 }
 
 .content {
   background-color: #f8a5c2;
-	grid-column-start: 1;
-	grid-column-end: 4;
-	grid-row-start: 2;
-	grid-row-end: 4;
+  grid-column: span 3;
+  grid-row: span 2;
 }
 
 .nav {
   background-color: #63cdda;
-	grid-row-start: 2;
-	grid-row-end: 4;
+  grid-row: span 2;
 }
 
 .footer {
   background-color: #ea8685;
-	grid-column-start: 1;
-	grid-column-end: 5;
+  grid-column: span 4;
 }
